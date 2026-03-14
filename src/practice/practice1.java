@@ -37,19 +37,23 @@ public class practice1 {
 //        four_wheel=(wheel-(2*vhe))/2;
 //        two_wheel=vhe-four_wheel;
 //        System.out.println(two_wheel+ " and "+four_wheel);
-int[]arr={0,1,0,2,3,0,4};
-int pos=0;
-for(int i=0;i<arr.length;i++){
-    if(arr[i]!=0){
-        int temp=arr[i];
-        arr[i]=arr[pos];
-        arr[pos]=temp;
-        pos++;
-    }
-}
-for(int x:arr){
-    System.out.println(x +" ");
-}
+//int[]arr={0,1,0,2,3,0,4};
+//int pos=0;
+//for(int i=0;i<arr.length;i++){
+//    if(arr[i]!=0){
+//        int temp=arr[i];
+//        arr[i]=arr[pos];
+//        arr[pos]=temp;
+//        pos++;
+//    }
+//}
+//for(int x:arr){
+//    System.out.println(x +" ");
+//}
+
+
+        int sum=1+2;
+        System.out.println(sum);
     }
 }
 
