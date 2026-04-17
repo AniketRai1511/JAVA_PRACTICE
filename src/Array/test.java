@@ -428,15 +428,30 @@ public class test {
         return max_product;
     }
 
-    public static void main(String[] args) {
-        int[] arr={2,3,-2,4};
-        int [][] arr1={{0,5},{1,2},{1,9}};
-        for(int i=0;i< arr.length;i++){
-            System.out.print(arr[i] + " ");
+    public static int LongestSubSequence(int [] nums){
+        Arrays.sort(nums);
+        int pre=Integer.MIN_VALUE;
+        int longest=1;
+        int count=0;
+        for(int i=0;i<nums.length;i++){
+            if((nums[i]-1)==pre){
+                count++;
+                pre=nums[i];
+            }
+            else if((pre)!=nums[i]){
+                count=1;
+                pre=nums[i];
+            }
+            longest=Math.max(longest,count);
         }
-        System.out.println();
-        int ans=MaxProduct(arr);
+        return longest;
+    }
+
+    public static void main(String[] args) {
+        int[] arr={2,3,100,101,102};
+        int ans=LongestSubSequence(arr);
         System.out.println(ans);
+
 
     }
 }
