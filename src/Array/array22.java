@@ -1,6 +1,6 @@
 package Array;
 
-public class test2 {
+public class array22 {
     public static int mergeSort(int [] arr,int low,int high){
         int count=0;
         if(low>=high){
