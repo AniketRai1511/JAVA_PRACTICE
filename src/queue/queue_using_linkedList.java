@@ -56,6 +56,7 @@ public class queue_using_linkedList {
         q1.push(10);
         q1.push(20);
         q1.push(30);
+        q1.push(40);
         System.out.println(q1.peek());
        q1.pop();
         System.out.println(q1.peek());
