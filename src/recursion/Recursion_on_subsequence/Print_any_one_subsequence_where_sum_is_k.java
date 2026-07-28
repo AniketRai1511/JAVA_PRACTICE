@@ -1,0 +1,36 @@
+package recursion.Recursion_on_subsequence;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Print_any_one_subsequence_where_sum_is_k {
+
+    public static boolean print(int i, int n, int[] nums, int sum, int k, List<Integer> list){
+        if(i==n){
+            if(sum==k){
+                System.out.println(list.toString());
+                return true;
+            }
+            return false;
+        }
+        list.add(nums[i]);
+        sum+=nums[i];
+        if(print(i+1,n,nums,sum,k,list)==true){
+            return true;
+        }
+        sum-=nums[i];
+        list.remove(list.size()-1);
+        if(print(i+1,n,nums,sum,k,list)==true){
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int [] nums={1,2,1,2,1,1};
+        int n= nums.length;
+        int k=5;
+        List<Integer> list=new ArrayList<>();
+        print(0,n,nums,0,k,list);
+    }
+}
